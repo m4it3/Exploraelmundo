@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilos/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!--MENU / HEADER-->
+    <header>
+        <div class="menuConteiner">
+            <section id="logo">
+                <h2>LOGO</h2>
+            </section>
+            <nav>
+                <ul class="menu">
+                    <li>
+                        <a href="../index.html">Inicio</a>
+                    </li>
+                    <li><a href="destinos.html">Destinos</a>
+                    </li>
+                    <li><a href="contacto.html">Contacto</a>
+                    </li>
+                    <li><a href="nosotros.html">Nosotros</a>
+                    </li>
+                    <li><a href="reserva.html">Reserva</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!--Titulo-->
+        <h1 class="titulos">RESERVA</h1>
+
+        <!--Formulario para reservar-->
+        <section class="formularioReserva">
+            <!-- Menú desplegable -->
+            <div>Seleccione destino</div>
+            <select name="destinos">
+                <option value="lonres">Londres</option>
+                <option value="oslo">Oslo</option>
+                <option value="tulum">Tulúm</option>
+                <option value="bariloche">Bariloche</option>
+                <option value="zurich">Zurich</option>
+                <option value="amsterdam">Tokio</option>
+            </select>
+
+            <!--Sleccionar tours-->
+            <div>Seleccione tours</div>
+            <select name="tours">
+                <option value="londoneye">Londres - London eye</option>
+                <option value="HarryPotter">Londres - Tour Harry Potter</option>
+                <option value="busturistico">Londres - Bus turístico</option>
+                <option value="stonehegebathsalisbury">Londres - Stonehege, Bath y Salisbury</option>
+                <option value="palaciodebuckinghamcastillodewindsor">Londres - Palacio de Buckingham y castillo de
+                    Windsor</option>
+                <option value="crucesodeinvierno">Oslo - Cruceso de invierno en el fiordo de Oslofjord</option>
+                <option value="deosloabergen">Oslo - excursion de auto guía: de Oslo a Bergen</option>
+                <option value="tournavideño">Oslo - Tour navideño</option>
+                <option value="montefujiyhakone">Tokio - Excursion Monte Fuji y Hakone</option>
+                <option value="lagokawaguchi">Tokio - Lago Kawaguchi</option>
+                <option value="tourporlaciudad">Tokio - Tour por la ciudad</option>
+                <option value="tourgatronomico">Tokio - Tour gatronomico nocturno en Shinjuku</option>
+                <option value="tulumymas">Tulúm - Desde Cancun: tour de Cobá, cenote, Tulum y Playa del Carmen</option>
+                <option value="tourarqueologico">Tulúm - Tour arqueologico en Tulum y Cobá</option>
+                <option value="islasvictoria">Bariloche - islas Victoria y bosque de los Arrayanes</option>
+                <option value="puertoblest">Bariloche - Puerto Blest y cascada Los Cántaros</option>
+                <option value="sietelagos">Bariloche - Tour a los 7 lagos y San Martin de los Andes</option>
+                <option value="cerrotronador">Bariloche - Cerro Tronador</option>
+                <option value="cerrootto">Bariloche - Teleférico del Cerro Otto</option>
+                <option value="Monte Titlis">Zurich - Monte Titlis</option>
+                <option value="Zurichymas">Zurich - Desde Zúrich: Schilthorn, Piz Gloria y Bond World</option>
+                <option value="jungfraujoch">Zurich - Tour al Jungfraujoch</option>
+                <option value="Zurichyotros">Zúrich - Desde Zúrich: tour a Lucerna y Engelberg</option>
+                <option value="Zurichferry">Zúrich - Tour en ferry, teleferico y autocar</option>
+                <option value="grindelwaldinterlaken">Zúrich - Desde Zúrich a Grindelwald e Interlaken</option>
+            </select>
+            <!--participantes,fecha e idioma-->
+            <article>
+                <p>Seleccionar numero de participantes, fecha e idioma</p>
+                <select name="cantidadpersonas">
+                    <option value="unadulto">x1 adulto</option>
+                    <option value="dosadultos">x2 adultos</option>
+                    <option value="tresadultos">x3 adultos</option>
+                    <option value="tresadultos">x4 adultos</option>
+                    <option value="tresadultos">x5 adultos</option>
+                </select>
+
+                <label for="start">Start date:</label>
+                <input type="date" id="start" name="trip-start" value="2021-12-24" min="2021-12-31" max="2023-12-31">
+
+                <select name="Idioma">
+                    <option value="unadulto">Español</option>
+                    <option value="dosadultos">Ingles</option>
+                </select>
+            </article>
+
+            <!-- Botones -->
+            <input type="submit" value="Comprobar disponibilidad" />
+            <input type="reset" value="Limpiar Datos" />
+            <input type="button" value="Non Action" />
+            </form>
+        </section>
+
+        <section class="ayuda">
+            <h1 id="necesitasAyuda">¿Necesitas ayuda?</h1>
+            <p>Estasmos aqui para lo que necesites</p>
+            <a href="contacto.html">Contactanos</a>
+        </section>
+
+    </main>
+
+
+    <!--Footer de ejemplo-->
+    <footer class="piePagina">
+
+        <section class="footerItem">
+            <div>
+                <p>LOGO</p>
+            </div>
+            <div>
+                <p class="contactoFooter">Conectate con nosotros</p>
+                <p class="contactoFooter">@Exploraelmundo<p>
+            </div>
+            <div>
+                <p class="info">Tel: +542920111111111</p>
+                <p class="info">Exploraelmundo@gmail.com</p>
+                <p class="info">Calle falsa, 123, Bs. As, Argentina</p>
+            </div>
+
+        </section>
+
+    </footer>
+
+</body>
+
+</html>

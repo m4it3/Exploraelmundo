@@ -1,0 +1,52 @@
+/*BOTONES DESTINOS*/
+.botonesDestinos {
+    padding: 80px;
+    margin-top: 20px;
+    margin-right: 50px;
+    margin-bottom: 30px;
+    margin-left: 50px;
+    background-image: url(../imagenes/playa.jpg);
+    background-size: cover;
+    border-radius: 20px;
+}
+
+.botonesDestinosRow1 {
+    display: flex;
+    justify-content: center;
+}
+
+.botonesDestinosRow2 {
+    display: flex;
+    justify-content: center;
+}
+
+/*DESTINOS INFO*/
+.glass {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    padding: 40px;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+/*Oslo*/
+.titulosCiudadesDerecha {
+    font-size: 200%;
+    margin-right: 250px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: right;
+}
+
+/*Imagenes de los tours*/
+.excursiones {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-evenly;
+}

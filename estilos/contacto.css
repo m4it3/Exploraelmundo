@@ -1,0 +1,43 @@
+/*subitulo y texto*/
+#subTituloContacto{
+    margin-top: 40px;
+    display:flex;
+    justify-content: center;
+}
+
+#textoContacto{
+    display:flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 70px;  
+}
+
+/*formulario*/
+#solicitarInfo{
+    margin-bottom: 20px;
+}
+
+.formulario{
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    padding:30px;
+    margin-right: 100px;
+    margin-left: 700px;
+}
+
+/*mas info*/
+.infoContacto{
+    padding: 100px;
+    margin-right: 100px;
+    margin-left: 100px;
+    margin-top: 70px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-between;
+}

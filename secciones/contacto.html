@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilos/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!--MENU / HEADER-->
+    <header>
+        <div class="menuConteiner">
+            <section id="logo">
+                <h2>LOGO</h2>
+            </section>
+            <nav>
+                <ul class="menu">
+                    <li>
+                        <a href="../index.html">Inicio</a>
+                    </li>
+                    <li><a href="destinos.html">Destinos</a>
+                    </li>
+                    <li><a href="contacto.html">Contacto</a>
+                    </li>
+                    <li><a href="nosotros.html">Nosotros</a>
+                    </li>
+                    <li><a href="reserva.html">Reserva</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!--Titulo-->
+        <h1 class="titulos">CONTACTANOS</h1> <br>
+
+        <!--Subtitulo-->
+        <article>
+            <h2 id="subTituloContacto">Comunicate con nosotros!</h2>
+            <p id="textoContacto">Por favor contactanos utilizando la informacion de abajo.</p>
+        </article>
+
+        <!--Formularios-->
+        <form class="formulario">
+            <h3 id="solicitarInfo">Solicitar información</h3>
+            <label for="name">Nombre y apellido</label>
+            <input type="text" name="name" /><br>
+            <label for="email">Ingrese su email</label>
+            <input type="text" placeholder="ejemplo@gmail.com" name="email" /><br>
+            <label for="telefono">Ingrese su telefono</label>
+            <input type="text" placeholder="+5411111111" name="telefono" /><br>
+
+            <!-- Menú desplegable -->
+            <div>Seleccione destino</div>
+            <select name="destinos">
+                <option value="lonres">Londres</option>
+                <option value="oslo">Oslo</option>
+                <option value="tulum">Tulúm</option>
+                <option value="bariloche">Bariloche</option>
+                <option value="zurich">Zurich</option>
+                <option value="amsterdam">Amsterdam</option>
+            </select> <br>
+
+            <!-- área de texto -->
+            <label for="info">Información a solicitar <br>
+                <textarea></textarea>
+            </label> <br>
+
+            <!-- Botones -->
+            <input type="submit" value="Enviar Datos" />
+            <input type="reset" value="Limpiar Datos" />
+            <input type="button" value="Non Action" />
+        </form>
+
+        <!--Iconos redes sociales-->
+        <section>
+            <h3>Redes sociales</h3>
+            <article>
+                <img src="../imagenes/iconos.png" alt="redessociales">
+                <img src="../imagenes/iconos.png" alt="redessociales">
+                <img src="../imagenes/iconos.png" alt="redessociales">
+            </article>
+        </section>
+
+        <!--Más Info de la empresa-->
+        <section class="infoContacto">
+            <div>
+                <h4>OFICINA</h4>
+                <p>Calle falsa 123, Buenos aires, Argentina</p>
+            </div>
+            <div>
+                <h4>TELEFONO</h4>
+                <p>+5411111111111</p>
+            </div>
+            <div>
+                <h4>EMAIL</h4>
+                <p>exploraelmundo@gmail.com</p>
+            </div>
+        </section>
+    </main>
+
+    <!--Footer de ejemplo-->
+    <footer class="piePagina">
+
+        <section class="footerItem">
+            <div>
+                <p>LOGO</p>
+            </div>
+            <div>
+                <p class="contactoFooter">Conectate con nosotros</p>
+                <p class="contactoFooter">@Exploraelmundo<p>
+            </div>
+            <div>
+                <p class="info">Tel: +542920111111111</p>
+                <p class="info">Exploraelmundo@gmail.com</p>
+                <p class="info">Calle falsa, 123, Bs. As, Argentina</p>
+            </div>
+
+        </section>
+
+    </footer>
+</body>
+
+</html>
