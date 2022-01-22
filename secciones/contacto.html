@@ -11,6 +11,7 @@
 
 <body>
 
+    <div class="padreContacto">
     <!--MENU / HEADER-->
 
     <header>
@@ -35,17 +36,18 @@
 
     </header>
 
-    <main>
+
         <!--Titulo-->
         <h1 class="titulos">CONTACTANOS</h1> <br>
 
         <!--Subtitulo-->
-        <article>
+        <article class="subtituloInfo">
             <h2 id="subTituloContacto">Comunicate con nosotros!</h2>
             <p id="textoContacto">Por favor contactanos utilizando la informacion de abajo.</p>
         </article>
 
         <!--Formularios-->
+
         <form class="formulario">
             <h3 id="solicitarInfo">Solicitar información</h3>
             <label for="name">Nombre y apellido</label>
@@ -78,52 +80,52 @@
         </form>
 
         <!--Iconos redes sociales-->
-        <section>
-            <h3>Redes sociales</h3>
+        <section class="redesSociales">
             <article>
+            <h3>Redes sociales</h3>
+            
                 <img src="../imagenes/iconos.png" alt="redessociales">
                 <img src="../imagenes/iconos.png" alt="redessociales">
                 <img src="../imagenes/iconos.png" alt="redessociales">
             </article>
         </section>
 
+
+
         <!--Más Info de la empresa-->
         <section class="infoContacto">
-            <div>
+            <div id="info1">
                 <h4>OFICINA</h4>
                 <p>Calle falsa 123, Buenos aires, Argentina</p>
             </div>
-            <div>
+            <div id="info2">
                 <h4>TELEFONO</h4>
                 <p>+5411111111111</p>
             </div>
-            <div>
+            <div id="info3">
                 <h4>EMAIL</h4>
                 <p>exploraelmundo@gmail.com</p>
             </div>
         </section>
-    </main>
 
-    <!--Footer de ejemplo-->
-    <footer class="piePagina">
 
-        <section class="footerItem">
-            <div>
-                <p>LOGO</p>
-            </div>
-            <div>
-                <p class="contactoFooter">Conectate con nosotros</p>
-                <p class="contactoFooter">@Exploraelmundo<p>
-            </div>
-            <div>
-                <p class="info">Tel: +542920111111111</p>
-                <p class="info">Exploraelmundo@gmail.com</p>
-                <p class="info">Calle falsa, 123, Bs. As, Argentina</p>
-            </div>
+    <!--Footer-->
+    <footer id="footer" class="footerFlex">
 
-        </section>
+        <p>LOGO</p>
+        <div class="contactoFooter">
+            <p> Conectate con nosotros</p>
+            <p> @Exploraelmundo<p>
+        </div>
+        <div class="info">
+            <p>Tel: +542920111111111</p>
+            <p>Exploraelmundo@gmail.com</p>
+            <p>Calle falsa, 123, Bs. As, Argentina</p>
+        </div>
 
     </footer>
+
+</div>
 </body>
 
 </html>
