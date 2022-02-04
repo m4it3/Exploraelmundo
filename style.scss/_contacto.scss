@@ -1,0 +1,142 @@
+/*---------------------CONTACTO---------------------*/
+
+/*subitulo y texto*/
+.subtituloInfo {
+    #subTituloContacto {
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+    }
+
+    #textoContacto {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        margin-bottom: 70px;
+    }
+}
+
+/*formulario*/
+.formulario {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    padding: 30px;
+
+    #solicitarInfo {
+        margin-bottom: 20px;
+    }
+}
+
+
+/*Gids contacto - desktop*/
+@media screen and (min-width: 1024px) {
+    .padreContacto {
+        max-width: 1600px;
+        margin: 0 auto;
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: 33.09% 33.09% 33.09%;
+        grid-template-rows: repeat(6, auto);
+        grid-template-areas:
+            "header           header           header"
+            ".                titulo           ."
+            ".                subtitulo        ."
+            ".                subtitulo        ."
+            "redes            formulario       ."
+            "info             info             info"
+            "footer           footer           footer";
+    }
+
+    .padreContacto .header {
+        grid-area: header;
+    }
+
+    .padreContacto .titulos {
+        grid-area: titulo;
+    }
+
+    .padreContacto .subtituloInfo {
+        grid-area: subtitulo;
+    }
+
+    .padreContacto .redesSociales {
+        grid-area: redes;
+    }
+
+    .padreContacto .formulario {
+        grid-area: formulario;
+    }
+
+    .padreContacto .infoContacto {
+        grid-area: info;
+    }
+
+    .padreContacto #footer {
+        grid-area: footer;
+    }
+
+    .formulario {
+        width: 75vh;
+    }
+
+    .redesSociales {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    /*mas info*/
+    .infoContacto {
+        padding: 100px;
+        margin-right: 100px;
+        margin-left: 100px;
+        margin-top: 70px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        justify-content: space-between;
+    }
+
+}
+
+
+/*grids movile*/
+@media only screen and (max-width: 420px) {
+    nav {
+        background-color: #F09A9D;
+        /* pink */
+
+    }
+
+    .padreContacto {
+        grid-template-areas:
+            "header"
+            "titulo "
+            "subtitulo"
+            "subtitulo"
+            "redes"
+            "formulario"
+            "info1"
+            "info2"
+            "info3"
+            "footer";
+    }
+
+    .padreContacto #info1 {
+        grid-area: info1;
+    }
+
+    .padreContacto #info2 {
+        grid-area: info2;
+    }
+
+    .padreContacto #info3 {
+        grid-area: info3;
+    }
+
+}

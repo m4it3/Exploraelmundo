@@ -1,0 +1,55 @@
+/*Reseteo*/
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    color:azure;
+    background-color: seagreen;
+    background: $gradienteFondo
+}
+
+/*Titulos y subtitulos*/
+.titulos {
+    text-align: center;
+    text-shadow: $sombraTexto
+}
+
+.subTitulos {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-shadow: $sombraTexto
+}
+
+
+/*footer*/
+.footerFlex {
+    display: flex;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+
+footer p {
+    font-style: normal;
+    line-height: 1cm;
+    font-size: 16px;
+}
+
+.contactoFooter {
+    font-size: large;
+    text-align: center;
+    color: rgb(238, 231, 222);
+}
+
+.info {
+    font: size 30px;
+    color: blanchedalmond;
+    text-align: right;
+}

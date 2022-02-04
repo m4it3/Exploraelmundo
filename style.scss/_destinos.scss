@@ -1,0 +1,353 @@
+/*----------------------DESTINOS---------------------*/
+/*BOTONES DESTINOS*/
+.botonesDestinos {
+    padding: 80px;
+    margin-top: 20px;
+    margin-right: 50px;
+    margin-bottom: 30px;
+    margin-left: 50px;
+    background-image: url(../imagenes/playa.jpg);
+    background-size: cover;
+    border-radius: 20px;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .botonesDestinosRow1 {
+        display: flex;
+        justify-content: center;
+    }
+
+    .botonesDestinosRow2 {
+        display: flex;
+        justify-content: center;
+    }
+
+    li {
+        padding: 20px 20px 20px 20px;
+        display: inline-block;
+    }
+}
+
+
+
+/*DESTINOS INFO*/
+.glass1,
+.glass2,
+.glass3,
+.glass4,
+.glass5,
+.glass6 {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    padding: 40px;
+    width: 90%;
+    height: 100%;
+
+}
+
+/*Titulos derecha e izquierda*/
+
+.titulosCiudadesDerecha {
+    font-size: 220%;
+    margin-right: 250px;
+    margin-bottom: 20px;
+    text-shadow: $sombraTexto;
+    display: flex;
+    justify-content: right;
+}
+
+.titulosCiudadesIzquierda {
+    font-size: 220%;
+    margin-left: 250px;
+    margin-bottom: 20px;
+    text-shadow: $sombraTexto;
+    display: flex;
+    justify-content: left;
+}
+
+
+
+/*Texto derecha e izquierda*/
+.textoCiudadDerecha {
+    margin-right: 30px;
+    margin-left: 50px;
+    word-spacing: 0.6em;
+    font-size: 110%;
+    text-align: right;
+}
+
+.textoCiudadIzquierda {
+    margin-right: 50px;
+    margin-left: 30px;
+    word-spacing: 0.6em;
+    font-size: 110%;
+    text-align: left;
+}
+
+
+/*Titulos excursiones izq*/
+.excursionesTitulo {
+    font-size: 180%;
+    text-shadow: $sombraTexto;
+}
+
+
+/*Grids Destinos General - Mobile*/
+@media (min-width: 576px) {
+    .padreDestinos {
+        background: rosybrown;
+        max-width: 1600px;
+        margin: 0 auto;
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(10, auto);
+        grid-template-areas:
+            "header"
+            "titulo"
+            "botonesDestinos"
+            "glass1"
+            "glass2"
+            "glass3"
+            "glass4"
+            "glass5"
+            "glass6"
+            "footer";
+    }
+
+    .padreDestinos .header {
+        grid-area: header;
+    }
+
+    .padreDestinos .titulos {
+        grid-area: titulo;
+    }
+
+    .padreDestinos .botonesDestinos {
+        grid-area: botonesDestinos;
+    }
+
+    .padreDestinos .glass1 {
+        grid-area: glass1;
+    }
+
+    .padreDestinos .glass2 {
+        grid-area: glass2;
+    }
+
+    .padreDestinos .glass3 {
+        grid-area: glass3;
+    }
+
+    .padreDestinos .glass4 {
+        grid-area: glass4;
+    }
+
+    .padreDestinos .glass5 {
+        grid-area: glass5;
+    }
+
+    .padreDestinos .glass6 {
+        grid-area: glass6;
+    }
+
+
+    .padreDestinos .footer {
+        grid-area: footer;
+    }
+
+}
+
+/* Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }*/
+
+
+
+/*Grids Destinos General - Desktop*/
+@media(min-width: 1024px) {
+    .padreDestinos {
+        max-width: 1600px;
+        margin: 0 auto;
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: 33.09% 33.09% 33.09%;
+        grid-template-rows: repeat(10, auto);
+        grid-template-areas:
+            "header           header             header"
+            ".                titulo              ."
+            "botonesDestinos  botonesDestinos     botonesDestinos"
+            "glass1           glass1             glass1"
+            "glass2           glass2              glass2"
+            "glass3           glass3              glass3"
+            "glass4           glass4              glass4"
+            "glass5           glass5              glass5"
+            "glass6           glass6              glass6"
+            "footer           footer               footer";
+    }
+
+    .padreDestinos .header {
+        grid-area: header;
+    }
+
+    .padreDestinos .titulos {
+        grid-area: titulo;
+    }
+
+    .padreDestinos .botonesDestinos {
+        grid-area: botonesDestinos;
+    }
+
+    .padreDestinos .glass1 {
+        grid-area: glass1;
+    }
+
+    .padreDestinos .glass2 {
+        grid-area: glass2;
+    }
+
+    .padreDestinos .glass3 {
+        grid-area: glass3;
+    }
+
+    .padreDestinos .glass4 {
+        grid-area: glass4;
+    }
+
+    .padreDestinos .glass5 {
+        grid-area: glass5;
+    }
+
+    .padreDestinos .glass6 {
+        grid-area: glass6;
+    }
+
+
+    .padreDestinos .footer {
+        grid-area: footer;
+    }
+
+
+    /*Iconos*/
+    .iconosDestinos {
+        display: flex;
+        justify-items: center;
+        justify-content: space-evenly;
+    }
+
+    /*Imagenes de los tours*/
+    .excursiones {
+        margin-top: 60px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        justify-content: space-evenly;
+    }
+
+}
+
+/*Grids impares*/
+@media (min-width: 1024px) {
+
+    .glass1,
+    .glass3,
+    .glass5 {
+        margin: 0 auto;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: 33% 33% 33%;
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas:
+            "titulosCiudadesDerecha      titulosCiudadesDerecha  titulosCiudadesDerecha"
+            "imagenizq                   textoCiudadDerecha      textoCiudadDerecha"
+            "imagenizq                   iconosDestinos          iconosDestinos"
+            "excursionesIzq              excursionesIzq          mapaDer"
+            "excursiones                 excursiones             excursiones";
+    }
+
+    .imagenizq {
+        grid-area: imagenizq;
+    }
+
+    .titulosCiudadesDerecha {
+        grid-area: titulosCiudadesDerecha;
+    }
+
+    .textoCiudadDerecha {
+        grid-area: textoCiudadDerecha;
+    }
+
+    .iconosDestinos {
+        grid-area: iconosDestinos;
+    }
+
+    .excursionesIzq {
+        grid-area: excursionesIzq;
+    }
+
+    .mapaDer {
+        grid-area: mapaDer;
+    }
+
+    .excursiones {
+        grid-area: excursiones;
+    }
+
+    #footer {
+        grid-area: footer;
+    }
+
+
+    /*Grids pares*/
+    .glass2,
+    .glass4,
+    .glass6 {
+        margin: 0 auto;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: 33% 33% 33%;
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas:
+            "titulosCiudadesIzquierda      titulosCiudadesIzquierda   titulosCiudadesIzquierda"
+            "textoCiudadIzquierda          textoCiudadIzquierda       imagenDer"
+            "iconosDestinos                iconosDestinos             imagenDer"
+            "mapaIzq                       excursionesDer             excursionesDer"
+            "excursiones                   excursiones                excursiones";
+    }
+
+    .titulosCiudadesIzquierda {
+        grid-area: titulosCiudadesIzquierda;
+    }
+
+    .textoCiudadIzquierda {
+        grid-area: textoCiudadIzquierda;
+    }
+
+    .imagenDer {
+        grid-area: imagenDer;
+    }
+
+    .iconosDestinos {
+        grid-area: iconosDestinos;
+    }
+
+    .mapaIzq {
+        grid-area: mapaIzq;
+    }
+
+    .excursionesDer {
+        grid-area: excursionesDer;
+    }
+
+    .excursiones {
+        grid-area: excursiones;
+    }
+
+
+}
