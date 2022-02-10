@@ -36,29 +36,18 @@
     -moz-box-shadow: 9px 10px 24px -1px rgba(0, 0, 0, 0.75);
 }
 
+
 /*RESEÑAS*/
 .reseña1, .reseña2, .reseña3 {
     margin: 10px;
     padding: 40px;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: map-get($map: $cajasReñeas, $key:background);
+    backdrop-filter: map-get($map: $cajasReseñas, $key:blur);
+    -webkit-backdrop-filter: map-get($map: $cajasReseñas, $key:blur);
     border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border: map-get($map: $cajasReseñas, $key:borde);
+    box-shadow: map-get($map: $cajasReseñas, $key:sombra);
 }
-
-/*.reseñasFlex {
-    margin-right: 100px;
-    margin-left: 100px;
-    margin-top: 70px;
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    justify-items:space-between;
-}*/
-
 
 
 /*FOOTER*/

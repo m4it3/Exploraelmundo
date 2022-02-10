@@ -54,19 +54,22 @@
 
 /*Titulos derecha e izquierda*/
 
+@mixin titulosCiudades ($font-size, $margenabajo, $margen-der:0, $margen-izq:0){
+    font-size: $font-size;
+    margin-bottom: $margenabajo;
+    margin-right: $margen-der;
+    margin-left: $margen-izq;
+}
+
 .titulosCiudadesDerecha {
-    font-size: 220%;
-    margin-right: 250px;
-    margin-bottom: 20px;
+    @include titulosCiudades (220%, 20px,250px);
     text-shadow: $sombraTexto;
     display: flex;
     justify-content: right;
 }
 
 .titulosCiudadesIzquierda {
-    font-size: 220%;
-    margin-left: 250px;
-    margin-bottom: 20px;
+    @include titulosCiudades (220%, 20px,0, 250px);
     text-shadow: $sombraTexto;
     display: flex;
     justify-content: left;

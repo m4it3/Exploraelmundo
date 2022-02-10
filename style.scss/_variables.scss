@@ -1,3 +1,13 @@
 /*ejemplo*/
 $gradienteFondo: linear-gradient(90deg, #06B5D6, #74BF04);
 $sombraTexto: 5px 2px 10px rgba(0,0,0,0.6);
+
+
+/*MAP CAJAS*/
+$cajasReseñas:(
+background:linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)),
+blur: blur(10px),
+borderedondo: 20px,
+borde: 1px solid rgba(255, 255, 255, 0.18),
+sombra: 0 8px 32px 0 rgba(0, 0, 0, 0.37),
+);
