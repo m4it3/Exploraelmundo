@@ -1,41 +1,185 @@
 /*------------------------NOSOTROS-------------------------*/
 
-.imagenEmpresa {
-
-    /*Imagen empresa*/
-    #fotoEmpresa {
-        margin: 30px;
-    }
-
-    /*Texto descripción empresa*/
-    #descripcionEmpresa {
-        margin: 40px;
-    }
-
+/*Texto descripción empresa*/
+#descripcionEmpresa {
+    margin: 40px;
 }
 
-/*Valores de la empresa en cajitas*/
+/*Cajitas valores*/
 .valoresEmpresa {
-    padding: 10px;
-    margin-top: 160px;
-    margin-bottom: 160px;
-    margin-left: 100px;
-    margin-right: 100px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    justify-content: space-evenly;
+.valorUno,
+.valorDos,
+.valorTres {
+    margin: 10px;
+    padding: 40px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    width: 90%;
+    height: 100%;
 }
+
+}
+
+
+
 
 /*Tres Imagenes del equipo*/
 .imagenesEquipo {
     margin-top: 60px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    justify-content: space-evenly;
 
-    .bordeImagenes {
+    #equipoImgUno,
+    #equipoImgDos,
+    #equipoImgTres {
         border-radius: 120px;
+    }
+}
+
+
+/*--------------GRIDS---------------*/
+
+/*Mobile*/
+@media only screen and (max-width: 768px) {
+    .padreNosotros {
+        margin:0 auto;
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(12, auto);
+        grid-template-areas:
+            "header"
+            "titulo"
+            "imagen"
+            "texto"
+            "valoresEmpresa"
+            "subtitulo"
+            "imagenesEquipo"
+            "footer";
+    }
+
+    .padreNosotros .header {
+        grid-area: header;
+    }
+
+    .padreNosotros #tituloNosotros {
+        grid-area: titulo;
+    }
+
+    .padreNostros .imagenEmpresa {
+        grid-area: imagen;
+    }
+
+    .padreNosotros #descripcionEmpresa {
+        grid-area: texto;
+    }
+
+
+    .padreNosotros .valoresEmpresa {
+        grid-area: valoresEmpresa;
+
+        .valorUno,
+        .valorDos,
+        .valorTres {
+            width: auto;
+            height: auto;
+        }
+    }
+
+    .padreNosotros #nuestroEquipo {
+        grid-area: subtitulo;
+    }
+
+    .padreNosotros .imagenesEquipo {
+        grid-area: imagenesEquipo;
+        display:flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .padreNosotros .piePagina {
+        grid-area: footer;
+    }
+
+}
+
+
+/*-----DESKTOP------*/
+@media (min-width: 1024px) {
+    .padreNosotros {
+        margin: 0 auto;
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: 33.09% 33.09% 33.09%;
+        grid-template-rows: repeat(7, auto);
+        grid-template-areas:
+            "header           header              header"
+            ".                titulo              ."
+            "imagen           descripcionEmpresa  descripcionEmpresa"
+            "valoresEmpresa   valoresEmpresa      valoresEmpresa"
+            ".                subtitulo           ."
+            "imagenesEquipo   imagenesEquipo      imagenesEquipo"
+            "footer           footer              footer";
+    }
+
+    .padreNosotros .header {
+        grid-area: header;
+    }
+
+    .padreNosotros #tituloNosotros {
+        grid-area: titulo;
+    }
+
+    .padreNosotros .imagenEmpresa {
+        grid-area: imagen;
+        margin-left: 50px;
+        margin-top: 40px;
+    }
+
+    .padreNosotros #descripcionEmpresa {
+        grid-area: descripcionEmpresa;
+        margin-left: 10%;
+    }
+
+    .padreNosotros .valoresEmpresa {
+        grid-area: valoresEmpresa;
+    }
+
+    .padreNosotros #nuestroEquipo {
+        grid-area: subtitulo;
+    }
+
+    .padreNosotros .imagenesEquipo {
+        grid-area: imagenesEquipo;
+    }
+
+
+    .padreNosotros #footer {
+        grid-area: footer;
+    }
+
+    /*cajas valores*/
+    .valoresEmpresa {
+        padding: 10px;
+        margin-top: 160px;
+        margin-bottom: 160px;
+        margin-left: 100px;
+        margin-right: 100px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        justify-content: space-evenly;
+    }
+
+
+    .imagenesEquipo {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        justify-content: space-evenly;
+        margin-bottom: 100px;
     }
 }

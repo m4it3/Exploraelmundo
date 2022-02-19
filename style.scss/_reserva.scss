@@ -9,8 +9,6 @@
     border: 1px solid rgba(255, 255, 255, 0.18);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     padding: 30px;
-    margin-right: 300px;
-    margin-left: 300px;
 }
 
 /*Espacio de ayuda*/
@@ -22,5 +20,48 @@
 
     #necesitasAyuda {
         margin-bottom: 10px;
+    }
+}
+
+@media (min-width: 420px) {
+    .padreReserva {
+        margin: 0 auto;
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas:
+            "header"
+            "titulo"
+            "formulario"
+            "ayuda"
+            "footer";
+    }
+
+    .padreReserva .header{
+        grid-area: header;
+    }
+
+    .padreReserva .titulo{
+        grid-area: titulo;
+    }
+
+    .padreRserva .formularioReserva{
+        grid-area: formulario;
+    }
+
+    .padreReserva .ayuda{
+        grid-area: ayuda;
+    }
+
+    .padreReserva .footer{
+        grid-area: footer;
+    }
+}
+
+@media (min-width: 1024px) {
+    .formularioReserva{
+        margin-left: 23%;
+        margin-right:23%;
     }
 }

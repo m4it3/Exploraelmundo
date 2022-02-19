@@ -18,9 +18,6 @@
         left: 50%;
         transform: translateX(-95%) translateY(-50%);
 
-        #exploraElMundo {
-            font-size: 300%;
-        }
     }
 
 }
@@ -41,7 +38,7 @@
 .reseña1, .reseña2, .reseña3 {
     margin: 10px;
     padding: 40px;
-    background: map-get($map: $cajasReñeas, $key:background);
+    background: map-get($map: $cajasReseñas, $key:background);
     backdrop-filter: map-get($map: $cajasReseñas, $key:blur);
     -webkit-backdrop-filter: map-get($map: $cajasReseñas, $key:blur);
     border-radius: 20px;
@@ -54,7 +51,7 @@
 footer {
     padding: 20px 30px 20px 30px;
     margin-bottom: 0;
-    margin-top: 200px;
+    margin-top: 150px;
     background-color: rgb(56, 56, 56);
 
     .footerFlex {
@@ -94,7 +91,7 @@ footer {
         margin: 0 auto;
         display: grid;
         grid-gap: 5px;
-        grid-template-columns: 33.09% 33.09% 33.09%;
+        grid-template-columns:33.09% 33.09% 33.09%;
         grid-template-rows: repeat(7, auto);
         grid-template-areas:
             "header           header           header"
@@ -200,27 +197,57 @@ footer {
 
 
 /*grids movile*/
-@media(max-width: 420px) {
-    nav {
-        background-color: #F09A9D;
-        /* pink */
-
-    }
-
+@media only screen and (max-width: 768px){
     .padre {
+        background: rosybrown;
+        margin: 0 auto;
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(7, auto);
         grid-template-areas:
             "header"
             "banner"
             "subtitulo1"
-            "imagen1"
-            "imagen2"
-            "imagen3"
+            "galeria"
             "subtitulo2"
-            "reseña1"
-            "reseña2"
-            "reseña3"
+            "reseñas"
             "footer";
     }
+
+    .padre .header {
+        grid-area: header;
+    }
+
+    .padre #banner {
+        grid-area: banner;
+    }
+
+    .padre #subtitulo1 {
+        grid-area: subtitulo1;
+    }
+
+    .padre .gridGaleria{
+        grid-area: galeria;
+        display:flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .padre #subtitulo2 {
+        grid-area: subtitulo2;
+    }
+
+    .padre .reseñas{
+        grid-area: reseñas;
+    }
+
+    .padre #footer {
+        grid-area: footer;
+
+    }
+
 
 }
 

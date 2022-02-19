@@ -17,7 +17,7 @@
 
 </head>
 
-<body>
+<body class="padreReserva">
 
     <!--MENU / HEADER-->
     <header>
@@ -44,79 +44,78 @@
         </nav>
     </header>
 
-    <main>
+ 
         <!--Titulo-->
         <h1 class="titulos">RESERVA</h1>
 
-        <!--Formulario para reservar-->
-        <section class="formularioReserva">
-            <!-- Menú desplegable -->
-            <div>Seleccione destino</div>
-            <select name="destinos">
-                <option value="lonres">Londres</option>
-                <option value="oslo">Oslo</option>
-                <option value="tulum">Tulúm</option>
-                <option value="bariloche">Bariloche</option>
-                <option value="zurich">Zurich</option>
-                <option value="amsterdam">Tokio</option>
-            </select>
 
-            <!--Sleccionar tours-->
-            <div>Seleccione tours</div>
-            <select name="tours">
-                <option value="londoneye">Londres - London eye</option>
-                <option value="HarryPotter">Londres - Tour Harry Potter</option>
-                <option value="busturistico">Londres - Bus turístico</option>
-                <option value="stonehegebathsalisbury">Londres - Stonehege, Bath y Salisbury</option>
-                <option value="palaciodebuckinghamcastillodewindsor">Londres - Palacio de Buckingham y castillo de
-                    Windsor</option>
-                <option value="crucesodeinvierno">Oslo - Cruceso de invierno en el fiordo de Oslofjord</option>
-                <option value="deosloabergen">Oslo - excursion de auto guía: de Oslo a Bergen</option>
-                <option value="tournavideño">Oslo - Tour navideño</option>
-                <option value="montefujiyhakone">Tokio - Excursion Monte Fuji y Hakone</option>
-                <option value="lagokawaguchi">Tokio - Lago Kawaguchi</option>
-                <option value="tourporlaciudad">Tokio - Tour por la ciudad</option>
-                <option value="tourgatronomico">Tokio - Tour gatronomico nocturno en Shinjuku</option>
-                <option value="tulumymas">Tulúm - Desde Cancun: tour de Cobá, cenote, Tulum y Playa del Carmen</option>
-                <option value="tourarqueologico">Tulúm - Tour arqueologico en Tulum y Cobá</option>
-                <option value="islasvictoria">Bariloche - islas Victoria y bosque de los Arrayanes</option>
-                <option value="puertoblest">Bariloche - Puerto Blest y cascada Los Cántaros</option>
-                <option value="sietelagos">Bariloche - Tour a los 7 lagos y San Martin de los Andes</option>
-                <option value="cerrotronador">Bariloche - Cerro Tronador</option>
-                <option value="cerrootto">Bariloche - Teleférico del Cerro Otto</option>
-                <option value="Monte Titlis">Zurich - Monte Titlis</option>
-                <option value="Zurichymas">Zurich - Desde Zúrich: Schilthorn, Piz Gloria y Bond World</option>
-                <option value="jungfraujoch">Zurich - Tour al Jungfraujoch</option>
-                <option value="Zurichyotros">Zúrich - Desde Zúrich: tour a Lucerna y Engelberg</option>
-                <option value="Zurichferry">Zúrich - Tour en ferry, teleferico y autocar</option>
-                <option value="grindelwaldinterlaken">Zúrich - Desde Zúrich a Grindelwald e Interlaken</option>
-            </select>
-            <!--participantes,fecha e idioma-->
-            <article>
-                <p>Seleccionar numero de participantes, fecha e idioma</p>
-                <select name="cantidadpersonas">
-                    <option value="unadulto">x1 adulto</option>
-                    <option value="dosadultos">x2 adultos</option>
-                    <option value="tresadultos">x3 adultos</option>
-                    <option value="tresadultos">x4 adultos</option>
-                    <option value="tresadultos">x5 adultos</option>
-                </select>
+        <!--formulario-->
+    <form class="formularioReserva">
+        <label for="formGroupExampleInput">Ingrese su Nombre y Apellido</label>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Nombre y Apellido">
+              </div>
+        <h6>Selecciones destino</h6>
+        <select name="destinos">
+            <option value="Oslo">Londres</option>
+            <option value="Londres">Oslo</option>
+            <option value="Tokio">Tokio</option>
+            <option value="Bariloche">Bariloche</option>
+            <option value="Tulum">Tulúm</option>
+            <option value="Zurich">Zurich</option>
+        </select>
+                   <!--Sleccionar tours-->
+                   <div>Seleccione tours</div>
+                   <select name="tours">
+                       <option value="londoneye">Londres - London eye</option>
+                       <option value="HarryPotter">Londres - Tour Harry Potter</option>
+                       <option value="busturistico">Londres - Bus turístico</option>
+                       <option value="stonehegebathsalisbury">Londres - Stonehege, Bath y Salisbury</option>
+                       <option value="palaciodebuckinghamcastillodewindsor">Londres - Palacio de Buckingham y castillo de
+                           Windsor</option>
+                       <option value="crucesodeinvierno">Oslo - Cruceso de invierno en el fiordo de Oslofjord</option>
+                       <option value="deosloabergen">Oslo - excursion de auto guía: de Oslo a Bergen</option>
+                       <option value="tournavideño">Oslo - Tour navideño</option>
+                       <option value="montefujiyhakone">Tokio - Excursion Monte Fuji y Hakone</option>
+                       <option value="lagokawaguchi">Tokio - Lago Kawaguchi</option>
+                       <option value="tourporlaciudad">Tokio - Tour por la ciudad</option>
+                       <option value="tourgatronomico">Tokio - Tour gatronomico nocturno en Shinjuku</option>
+                       <option value="tulumymas">Tulúm - Desde Cancun: tour de Cobá, cenote, Tulum y Playa del Carmen</option>
+                       <option value="tourarqueologico">Tulúm - Tour arqueologico en Tulum y Cobá</option>
+                       <option value="islasvictoria">Bariloche - islas Victoria y bosque de los Arrayanes</option>
+                       <option value="puertoblest">Bariloche - Puerto Blest y cascada Los Cántaros</option>
+                       <option value="sietelagos">Bariloche - Tour a los 7 lagos y San Martin de los Andes</option>
+                       <option value="cerrotronador">Bariloche - Cerro Tronador</option>
+                       <option value="cerrootto">Bariloche - Teleférico del Cerro Otto</option>
+                       <option value="Monte Titlis">Zurich - Monte Titlis</option>
+                       <option value="Zurichymas">Zurich - Desde Zúrich: Schilthorn, Piz Gloria y Bond World</option>
+                       <option value="jungfraujoch">Zurich - Tour al Jungfraujoch</option>
+                       <option value="Zurichyotros">Zúrich - Desde Zúrich: tour a Lucerna y Engelberg</option>
+                       <option value="Zurichferry">Zúrich - Tour en ferry, teleferico y autocar</option>
+                       <option value="grindelwaldinterlaken">Zúrich - Desde Zúrich a Grindelwald e Interlaken</option>
+                   </select>
 
-                <label for="start">Start date:</label>
-                <input type="date" id="start" name="trip-start" value="2021-12-24" min="2021-12-31" max="2023-12-31">
-
-                <select name="Idioma">
-                    <option value="unadulto">Español</option>
-                    <option value="dosadultos">Ingles</option>
-                </select>
-            </article>
-
-            <!-- Botones -->
-            <input type="submit" value="Comprobar disponibilidad" />
-            <input type="reset" value="Limpiar Datos" />
-            <input type="button" value="Non Action" />
-            </form>
-        </section>
+                   <article>
+                    <p>Seleccionar numero de participantes, fecha e idioma</p>
+                    <select name="cantidadpersonas">
+                        <option value="unadulto">x1 adulto</option>
+                        <option value="dosadultos">x2 adultos</option>
+                        <option value="tresadultos">x3 adultos</option>
+                        <option value="tresadultos">x4 adultos</option>
+                        <option value="tresadultos">x5 adultos</option>
+                    </select>
+    
+                    <label for="start">Fecha de inicio:</label>
+                    <input type="date" id="start" name="trip-start" value="2022-02-24" min="2022-02-10" max="2023-12-31">
+    
+                    <select name="Idioma">
+                        <option value="unadulto">Español</option>
+                        <option value="dosadultos">Ingles</option>
+                    </select>
+                </article>
+    
+                <button type="enviar" class="btn btn-dark botonFormulario">Reservar</button>
+    </form>
 
         <section class="ayuda">
             <h1 id="necesitasAyuda">¿Necesitas ayuda?</h1>
@@ -124,7 +123,7 @@
             <a class="btn btn-light" href="contacto.html" role="button">Contactanos</a>
         </section>
 
-    </main>
+
 
 
     <!--Footer de ejemplo-->

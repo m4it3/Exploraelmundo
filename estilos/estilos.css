@@ -1,6 +1,11 @@
 @charset "UTF-8";
 /*ejemplo*/
+/*MAP CAJAS*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+.card-text {
+  color: black;
+}
+
 /*Reseteo*/
 * {
   padding: 0;
@@ -85,10 +90,6 @@ footer p {
           transform: translateX(-95%) translateY(-50%);
 }
 
-#banner .contenedor #exploraElMundo {
-  font-size: 300%;
-}
-
 /*IMAGENES*/
 .imagen1,
 .imagen2,
@@ -115,7 +116,7 @@ footer p {
 footer {
   padding: 20px 30px 20px 30px;
   margin-bottom: 0;
-  margin-top: 200px;
+  margin-top: 150px;
   background-color: #383838;
 }
 
@@ -283,13 +284,66 @@ footer .footerFlex .info {
 }
 
 /*grids movile*/
-@media (max-width: 420px) {
-  nav {
-    background-color: #F09A9D;
-    /* pink */
-  }
+@media only screen and (max-width: 768px) {
   .padre {
-        grid-template-areas: "header" "banner" "subtitulo1" "imagen1" "imagen2" "imagen3" "subtitulo2" "reseña1" "reseña2" "reseña3" "footer";
+    background: rosybrown;
+    margin: 0 auto;
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 5px;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -ms-grid-rows: (auto)[7];
+        grid-template-rows: repeat(7, auto);
+        grid-template-areas: "header" "banner" "subtitulo1" "galeria" "subtitulo2" "reseñas" "footer";
+  }
+  .padre .header {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: header;
+  }
+  .padre #banner {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: banner;
+  }
+  .padre #subtitulo1 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: subtitulo1;
+  }
+  .padre .gridGaleria {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    grid-area: galeria;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .padre #subtitulo2 {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    grid-area: subtitulo2;
+  }
+  .padre .reseñas {
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
+    grid-area: reseñas;
+  }
+  .padre #footer {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+    grid-area: footer;
   }
 }
 
@@ -359,8 +413,9 @@ footer .footerFlex .info {
 /*Titulos derecha e izquierda*/
 .titulosCiudadesDerecha {
   font-size: 220%;
-  margin-right: 250px;
   margin-bottom: 20px;
+  margin-right: 250px;
+  margin-left: 0;
   text-shadow: 5px 2px 10px rgba(0, 0, 0, 0.6);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -372,8 +427,9 @@ footer .footerFlex .info {
 
 .titulosCiudadesIzquierda {
   font-size: 220%;
-  margin-left: 250px;
   margin-bottom: 20px;
+  margin-right: 0;
+  margin-left: 250px;
   text-shadow: 5px 2px 10px rgba(0, 0, 0, 0.6);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -407,10 +463,8 @@ footer .footerFlex .info {
 }
 
 /*Grids Destinos General - Mobile*/
-@media (min-width: 576px) {
+@media (min-width: 420px) {
   .padreDestinos {
-    background: rosybrown;
-    max-width: 1600px;
     margin: 0 auto;
     display: -ms-grid;
     display: grid;
@@ -440,36 +494,57 @@ footer .footerFlex .info {
     -ms-grid-row: 4;
     -ms-grid-column: 1;
     grid-area: glass1;
+    margin-left: 5%;
   }
   .padreDestinos .glass2 {
     -ms-grid-row: 5;
     -ms-grid-column: 1;
     grid-area: glass2;
+    margin-left: 5%;
   }
   .padreDestinos .glass3 {
     -ms-grid-row: 6;
     -ms-grid-column: 1;
     grid-area: glass3;
+    margin-left: 5%;
   }
   .padreDestinos .glass4 {
     -ms-grid-row: 7;
     -ms-grid-column: 1;
     grid-area: glass4;
+    margin-left: 5%;
   }
   .padreDestinos .glass5 {
     -ms-grid-row: 8;
     -ms-grid-column: 1;
     grid-area: glass5;
+    margin-left: 5%;
   }
   .padreDestinos .glass6 {
     -ms-grid-row: 9;
     -ms-grid-column: 1;
     grid-area: glass6;
+    margin-left: 5%;
   }
   .padreDestinos .footer {
     -ms-grid-row: 10;
     -ms-grid-column: 1;
     grid-area: footer;
+  }
+  .excursiones {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -732,8 +807,12 @@ footer .footerFlex .info {
   margin-bottom: 20px;
 }
 
+.formulario .botonFormulario {
+  margin-top: 10px;
+}
+
 /*Gids contacto - desktop*/
-@media screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
   .padreContacto {
     max-width: 1600px;
     margin: 0 auto;
@@ -820,87 +899,247 @@ footer .footerFlex .info {
 }
 
 /*grids movile*/
-@media only screen and (max-width: 420px) {
-  nav {
-    background-color: #F09A9D;
-    /* pink */
-  }
+@media (max-width: 768px) {
   .padreContacto {
-        grid-template-areas: "header" "titulo " "subtitulo" "subtitulo" "redes" "formulario" "info1" "info2" "info3" "footer";
+    margin: 0 auto;
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 5px;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -ms-grid-rows: (auto)[8];
+        grid-template-rows: repeat(8, auto);
+        grid-template-areas: "header" "titulo " "subtitulo" "subtitulo" "formulario" "redes" "info" "footer";
   }
-  .padreContacto #info1 {
+  .padreContacto .redesSociales {
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
+    grid-area: redes;
+    margin-top: 10%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .padreContacto .infoContacto {
     -ms-grid-row: 7;
     -ms-grid-column: 1;
-    grid-area: info1;
-  }
-  .padreContacto #info2 {
-    -ms-grid-row: 8;
-    -ms-grid-column: 1;
-    grid-area: info2;
-  }
-  .padreContacto #info3 {
-    -ms-grid-row: 9;
-    -ms-grid-column: 1;
-    grid-area: info3;
+    grid-area: info;
+    margin-top: 10%;
+    margin-left: 33.9%;
+    margin-right: 33.9%;
   }
 }
 
 /*------------------------NOSOTROS-------------------------*/
-.imagenEmpresa {
-  /*Imagen empresa*/
-  /*Texto descripción empresa*/
-}
-
-.imagenEmpresa #fotoEmpresa {
-  margin: 30px;
-}
-
-.imagenEmpresa #descripcionEmpresa {
+/*Texto descripción empresa*/
+#descripcionEmpresa {
   margin: 40px;
 }
 
-/*Valores de la empresa en cajitas*/
-.valoresEmpresa {
-  padding: 10px;
-  margin-top: 160px;
-  margin-bottom: 160px;
-  margin-left: 100px;
-  margin-right: 100px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+/*Cajitas valores*/
+.valoresEmpresa .valorUno,
+.valoresEmpresa .valorDos,
+.valoresEmpresa .valorTres {
+  margin: 10px;
+  padding: 40px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  -webkit-box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+          box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  width: 90%;
+  height: 100%;
 }
 
 /*Tres Imagenes del equipo*/
 .imagenesEquipo {
   margin-top: 60px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
 }
 
-.imagenesEquipo .bordeImagenes {
+.imagenesEquipo #equipoImgUno,
+.imagenesEquipo #equipoImgDos,
+.imagenesEquipo #equipoImgTres {
   border-radius: 120px;
+}
+
+/*--------------GRIDS---------------*/
+/*Mobile*/
+@media only screen and (max-width: 768px) {
+  .padreNosotros {
+    margin: 0 auto;
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 5px;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -ms-grid-rows: (auto)[12];
+        grid-template-rows: repeat(12, auto);
+        grid-template-areas: "header" "titulo" "imagen" "texto" "valoresEmpresa" "subtitulo" "imagenesEquipo" "footer";
+  }
+  .padreNosotros .header {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: header;
+  }
+  .padreNosotros #tituloNosotros {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: titulo;
+  }
+  .padreNostros .imagenEmpresa {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: imagen;
+  }
+  .padreNosotros #descripcionEmpresa {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    grid-area: texto;
+  }
+  .padreNosotros .valoresEmpresa {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    grid-area: valoresEmpresa;
+  }
+  .padreNosotros .valoresEmpresa .valorUno,
+  .padreNosotros .valoresEmpresa .valorDos,
+  .padreNosotros .valoresEmpresa .valorTres {
+    width: auto;
+    height: auto;
+  }
+  .padreNosotros #nuestroEquipo {
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
+    grid-area: subtitulo;
+  }
+  .padreNosotros .imagenesEquipo {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+    grid-area: imagenesEquipo;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .padreNosotros .piePagina {
+    -ms-grid-row: 8;
+    -ms-grid-column: 1;
+    grid-area: footer;
+  }
+}
+
+/*-----DESKTOP------*/
+@media (min-width: 1024px) {
+  .padreNosotros {
+    margin: 0 auto;
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 5px;
+    -ms-grid-columns: 33.09% 33.09% 33.09%;
+        grid-template-columns: 33.09% 33.09% 33.09%;
+    -ms-grid-rows: (auto)[7];
+        grid-template-rows: repeat(7, auto);
+        grid-template-areas: "header           header              header" ".                titulo              ." "imagen           descripcionEmpresa  descripcionEmpresa" "valoresEmpresa   valoresEmpresa      valoresEmpresa" ".                subtitulo           ." "imagenesEquipo   imagenesEquipo      imagenesEquipo" "footer           footer              footer";
+  }
+  .padreNosotros .header {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: header;
+  }
+  .padreNosotros #tituloNosotros {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: titulo;
+  }
+  .padreNosotros .imagenEmpresa {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: imagen;
+    margin-left: 50px;
+    margin-top: 40px;
+  }
+  .padreNosotros #descripcionEmpresa {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-area: descripcionEmpresa;
+    margin-left: 10%;
+  }
+  .padreNosotros .valoresEmpresa {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: valoresEmpresa;
+  }
+  .padreNosotros #nuestroEquipo {
+    -ms-grid-row: 5;
+    -ms-grid-column: 2;
+    grid-area: subtitulo;
+  }
+  .padreNosotros .imagenesEquipo {
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: imagenesEquipo;
+  }
+  .padreNosotros #footer {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: footer;
+  }
+  /*cajas valores*/
+  .valoresEmpresa {
+    padding: 10px;
+    margin-top: 160px;
+    margin-bottom: 160px;
+    margin-left: 100px;
+    margin-right: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .imagenesEquipo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    margin-bottom: 100px;
+  }
 }
 
 /*----------------------RESERVA----------------------*/
@@ -914,8 +1153,6 @@ footer .footerFlex .info {
   -webkit-box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
           box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   padding: 30px;
-  margin-right: 300px;
-  margin-left: 300px;
 }
 
 /*Espacio de ayuda*/
@@ -928,5 +1165,51 @@ footer .footerFlex .info {
 
 .ayuda #necesitasAyuda {
   margin-bottom: 10px;
+}
+
+@media (min-width: 420px) {
+  .padreReserva {
+    margin: 0 auto;
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 5px;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -ms-grid-rows: (auto)[5];
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas: "header" "titulo" "formulario" "ayuda" "footer";
+  }
+  .padreReserva .header {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: header;
+  }
+  .padreReserva .titulo {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: titulo;
+  }
+  .padreRserva .formularioReserva {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: formulario;
+  }
+  .padreReserva .ayuda {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    grid-area: ayuda;
+  }
+  .padreReserva .footer {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    grid-area: footer;
+  }
+}
+
+@media (min-width: 1024px) {
+  .formularioReserva {
+    margin-left: 23%;
+    margin-right: 23%;
+  }
 }
 /*# sourceMappingURL=estilos.css.map */
