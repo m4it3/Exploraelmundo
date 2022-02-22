@@ -35,6 +35,55 @@
     }
 }
 
+/*grids movile*/
+@media (min-width: 420px) {
+
+    .padreContacto {
+        margin: 0 auto;
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(8, auto);
+        grid-template-areas:
+            "header"
+            "titulo "
+            "subtitulo"
+            "subtitulo"
+            "formulario"
+            "redes"
+            "info"
+            "footer";
+    }
+    .padreContacto .header {
+        grid-area: header;
+    }
+
+    .padreContacto .titulos {
+        grid-area: titulo;
+    }
+
+    .padreContacto .subtituloInfo {
+        grid-area: subtitulo;
+    }
+
+    .padreContacto .redesSociales{
+        grid-area: redes;
+        margin-top: 10%;
+        display:flex;
+        justify-content: center;
+    }
+
+    .padreContacto .infoContacto{
+        grid-area: info; 
+        margin-top: 10%;  
+        margin-left: 33.9%;
+        margin-right:33.9%;
+    }
+
+    .padreContacto .formulario {
+        grid-area: formulario;
+    }
+}
 
 /*Gids contacto - desktop*/
 @media (min-width: 1024px) {
@@ -69,32 +118,18 @@
 
     .padreContacto .redesSociales {
         grid-area: redes;
-    }
-
-    .padreContacto .formulario {
-        grid-area: formulario;
-    }
-
-    .padreContacto .infoContacto {
-        grid-area: info;
-    }
-
-    .padreContacto #footer {
-        grid-area: footer;
-    }
-
-    .formulario {
-        width: 75vh;
-    }
-
-    .redesSociales {
         display: flex;
         justify-content: center;
 
     }
 
-    /*mas info*/
-    .infoContacto {
+    .padreContacto .formulario {
+        grid-area: formulario;
+        width: 75vh;
+    }
+
+    .padreContacto .infoContacto {
+        grid-area: info;
         padding: 100px;
         margin-right: 100px;
         margin-left: 100px;
@@ -106,42 +141,8 @@
         justify-content: space-between;
     }
 
-}
-
-
-/*grids movile*/
-@media (max-width: 768px) {
-
-    .padreContacto {
-        margin: 0 auto;
-        display: grid;
-        grid-gap: 5px;
-        grid-template-columns: 100%;
-        grid-template-rows: repeat(8, auto);
-        grid-template-areas:
-            "header"
-            "titulo "
-            "subtitulo"
-            "subtitulo"
-            "formulario"
-            "redes"
-            "info"
-            "footer";
+    .padreContacto #footer {
+        grid-area: footer;
     }
-
-    .padreContacto .redesSociales{
-        grid-area: redes;
-        margin-top: 10%;
-        display:flex;
-        justify-content: center;
-    }
-
-    .padreContacto .infoContacto{
-        grid-area: info; 
-        margin-top: 10%;  
-        margin-left: 33.9%;
-        margin-right:33.9%;
-    }
-
 
 }

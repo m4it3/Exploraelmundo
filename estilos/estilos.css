@@ -15,9 +15,7 @@
 body {
   font-family: 'Roboto Condensed', sans-serif;
   color: azure;
-  background-color: seagreen;
-  background: -webkit-gradient(linear, left top, right top, from(#06B5D6), to(#74BF04));
-  background: linear-gradient(90deg, #06B5D6, #74BF04);
+  background-color: #0E751E;
 }
 
 /*Titulos y subtitulos*/
@@ -156,6 +154,96 @@ footer .footerFlex .info {
 }
 
 /* --------------------GRIDS-------------------*/
+/*grids movile*/
+@media only screen and (max-width: 768px) {
+  .padre {
+    margin: 0 auto;
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 5px;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -ms-grid-rows: (auto)[7];
+        grid-template-rows: repeat(7, auto);
+        grid-template-areas: "header" "banner" "subtitulo1" "galeria" "subtitulo2" "reseñas" "footer";
+  }
+  .padre .header {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: header;
+  }
+  .padre #banner {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: banner;
+  }
+  .padre #subtitulo1 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: subtitulo1;
+  }
+  .padre .gridGaleria {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    grid-area: galeria;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .padre #subtitulo2 {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    grid-area: subtitulo2;
+  }
+  .padre .reseñas {
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
+    grid-area: reseñas;
+  }
+  .padre #footer {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+    grid-area: footer;
+  }
+}
+
+/*grids tablet*/
+@media screen and (min-width: 768px) {
+  .gridGaleria {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .reseñas {
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 50px;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "reseña1 reseña2 reseña3";
+  }
+}
+
 @media (min-width: 1024px) {
   .padre {
     max-width: 1600px;
@@ -283,73 +371,6 @@ footer .footerFlex .info {
   }
 }
 
-/*grids movile*/
-@media only screen and (max-width: 768px) {
-  .padre {
-    background: rosybrown;
-    margin: 0 auto;
-    display: -ms-grid;
-    display: grid;
-    grid-gap: 5px;
-    -ms-grid-columns: 100%;
-        grid-template-columns: 100%;
-    -ms-grid-rows: (auto)[7];
-        grid-template-rows: repeat(7, auto);
-        grid-template-areas: "header" "banner" "subtitulo1" "galeria" "subtitulo2" "reseñas" "footer";
-  }
-  .padre .header {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    grid-area: header;
-  }
-  .padre #banner {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-    grid-area: banner;
-  }
-  .padre #subtitulo1 {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-    grid-area: subtitulo1;
-  }
-  .padre .gridGaleria {
-    -ms-grid-row: 4;
-    -ms-grid-column: 1;
-    grid-area: galeria;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .padre #subtitulo2 {
-    -ms-grid-row: 5;
-    -ms-grid-column: 1;
-    grid-area: subtitulo2;
-  }
-  .padre .reseñas {
-    -ms-grid-row: 6;
-    -ms-grid-column: 1;
-    grid-area: reseñas;
-  }
-  .padre #footer {
-    -ms-grid-row: 7;
-    -ms-grid-column: 1;
-    grid-area: footer;
-  }
-}
-
-/*grids tablet*/
-/*@media screen and (min-width: 768px){
-*/
 /*----------------------DESTINOS---------------------*/
 /*BOTONES DESTINOS*/
 .botonesDestinos {
@@ -358,7 +379,7 @@ footer .footerFlex .info {
   margin-right: 50px;
   margin-bottom: 30px;
   margin-left: 50px;
-  background-image: url(../imagenes/playa.jpg);
+  background-image: url(../imagenes/playacenital.jpg);
   background-size: cover;
   border-radius: 20px;
 }
@@ -408,52 +429,6 @@ footer .footerFlex .info {
   padding: 40px;
   width: 90%;
   height: 100%;
-}
-
-/*Titulos derecha e izquierda*/
-.titulosCiudadesDerecha {
-  font-size: 220%;
-  margin-bottom: 20px;
-  margin-right: 250px;
-  margin-left: 0;
-  text-shadow: 5px 2px 10px rgba(0, 0, 0, 0.6);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
-}
-
-.titulosCiudadesIzquierda {
-  font-size: 220%;
-  margin-bottom: 20px;
-  margin-right: 0;
-  margin-left: 250px;
-  text-shadow: 5px 2px 10px rgba(0, 0, 0, 0.6);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
-}
-
-/*Texto derecha e izquierda*/
-.textoCiudadDerecha {
-  margin-right: 30px;
-  margin-left: 50px;
-  word-spacing: 0.6em;
-  font-size: 110%;
-  text-align: right;
-}
-
-.textoCiudadIzquierda {
-  margin-right: 50px;
-  margin-left: 30px;
-  word-spacing: 0.6em;
-  font-size: 110%;
-  text-align: left;
 }
 
 /*Titulos excursiones izq*/
@@ -546,10 +521,48 @@ footer .footerFlex .info {
         -ms-flex-pack: center;
             justify-content: center;
   }
+  .excursionesTitulo,
+  .titulosCiudadesDerecha,
+  .titulosCiudadesIzquierda,
+  .mapaDer,
+  .mapaIzq {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
-/* Medium devices (tablets, 768px and up)
-@media (min-width: 768px) { ... }*/
+@media (min-width: 768px) {
+  /*Imagenes de los tours*/
+  .excursiones {
+    margin-top: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .mapaDer,
+  .mapaIzq {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+}
+
 /*Grids Destinos General - Desktop*/
 @media (min-width: 1024px) {
   .padreDestinos {
@@ -622,6 +635,48 @@ footer .footerFlex .info {
     -ms-grid-column: 1;
     -ms-grid-column-span: 3;
     grid-area: footer;
+  }
+  /*Titulos derecha e izquierda*/
+  .titulosCiudadesDerecha {
+    font-size: 210%;
+    margin-bottom: 20px;
+    margin-right: 250px;
+    margin-left: 0;
+    text-shadow: 5px 2px 10px rgba(0, 0, 0, 0.6);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
+  }
+  .titulosCiudadesIzquierda {
+    font-size: 210%;
+    margin-bottom: 20px;
+    margin-right: 0;
+    margin-left: 250px;
+    text-shadow: 5px 2px 10px rgba(0, 0, 0, 0.6);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
+  /*Texto derecha e izquierda*/
+  .textoCiudadDerecha {
+    margin-right: 30px;
+    margin-left: 50px;
+    word-spacing: 0.6em;
+    font-size: 110%;
+    text-align: right;
+  }
+  .textoCiudadIzquierda {
+    margin-right: 50px;
+    margin-left: 30px;
+    word-spacing: 0.6em;
+    font-size: 110%;
+    text-align: left;
   }
   /*Iconos*/
   .iconosDestinos {
@@ -811,6 +866,62 @@ footer .footerFlex .info {
   margin-top: 10px;
 }
 
+/*grids movile*/
+@media (min-width: 420px) {
+  .padreContacto {
+    margin: 0 auto;
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 5px;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -ms-grid-rows: (auto)[8];
+        grid-template-rows: repeat(8, auto);
+        grid-template-areas: "header" "titulo " "subtitulo" "subtitulo" "formulario" "redes" "info" "footer";
+  }
+  .padreContacto .header {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: header;
+  }
+  .padreContacto .titulos {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: titulo;
+  }
+  .padreContacto .subtituloInfo {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    grid-area: subtitulo;
+  }
+  .padreContacto .redesSociales {
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
+    grid-area: redes;
+    margin-top: 10%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .padreContacto .infoContacto {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+    grid-area: info;
+    margin-top: 10%;
+    margin-left: 33.9%;
+    margin-right: 33.9%;
+  }
+  .padreContacto .formulario {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    grid-area: formulario;
+  }
+}
+
 /*Gids contacto - desktop*/
 @media (min-width: 1024px) {
   .padreContacto {
@@ -846,28 +957,6 @@ footer .footerFlex .info {
     -ms-grid-row: 5;
     -ms-grid-column: 1;
     grid-area: redes;
-  }
-  .padreContacto .formulario {
-    -ms-grid-row: 5;
-    -ms-grid-column: 2;
-    grid-area: formulario;
-  }
-  .padreContacto .infoContacto {
-    -ms-grid-row: 6;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
-    grid-area: info;
-  }
-  .padreContacto #footer {
-    -ms-grid-row: 7;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
-    grid-area: footer;
-  }
-  .formulario {
-    width: 75vh;
-  }
-  .redesSociales {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -875,8 +964,17 @@ footer .footerFlex .info {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  /*mas info*/
-  .infoContacto {
+  .padreContacto .formulario {
+    -ms-grid-row: 5;
+    -ms-grid-column: 2;
+    grid-area: formulario;
+    width: 75vh;
+  }
+  .padreContacto .infoContacto {
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: info;
     padding: 100px;
     margin-right: 100px;
     margin-left: 100px;
@@ -896,40 +994,11 @@ footer .footerFlex .info {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-}
-
-/*grids movile*/
-@media (max-width: 768px) {
-  .padreContacto {
-    margin: 0 auto;
-    display: -ms-grid;
-    display: grid;
-    grid-gap: 5px;
-    -ms-grid-columns: 100%;
-        grid-template-columns: 100%;
-    -ms-grid-rows: (auto)[8];
-        grid-template-rows: repeat(8, auto);
-        grid-template-areas: "header" "titulo " "subtitulo" "subtitulo" "formulario" "redes" "info" "footer";
-  }
-  .padreContacto .redesSociales {
-    -ms-grid-row: 6;
-    -ms-grid-column: 1;
-    grid-area: redes;
-    margin-top: 10%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .padreContacto .infoContacto {
+  .padreContacto #footer {
     -ms-grid-row: 7;
     -ms-grid-column: 1;
-    grid-area: info;
-    margin-top: 10%;
-    margin-left: 33.9%;
-    margin-right: 33.9%;
+    -ms-grid-column-span: 3;
+    grid-area: footer;
   }
 }
 
@@ -969,9 +1038,8 @@ footer .footerFlex .info {
 
 /*--------------GRIDS---------------*/
 /*Mobile*/
-@media only screen and (max-width: 768px) {
+@media (min-width: 420px) {
   .padreNosotros {
-    margin: 0 auto;
     display: -ms-grid;
     display: grid;
     grid-gap: 5px;
@@ -1040,6 +1108,20 @@ footer .footerFlex .info {
     -ms-grid-column: 1;
     grid-area: footer;
   }
+  .imagenEmpresa {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: imagen;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 /*-----DESKTOP------*/
@@ -1096,6 +1178,20 @@ footer .footerFlex .info {
     -ms-grid-column: 1;
     -ms-grid-column-span: 3;
     grid-area: imagenesEquipo;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    margin-bottom: 100px;
   }
   .padreNosotros #footer {
     -ms-grid-row: 7;
@@ -1123,22 +1219,6 @@ footer .footerFlex .info {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
-  }
-  .imagenesEquipo {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    margin-bottom: 100px;
   }
 }
 

@@ -6,7 +6,7 @@
     margin-right: 50px;
     margin-bottom: 30px;
     margin-left: 50px;
-    background-image: url(../imagenes/playa.jpg);
+    background-image: url(../imagenes/playacenital.jpg);
     background-size: cover;
     border-radius: 20px;
 
@@ -31,8 +31,6 @@
     }
 }
 
-
-
 /*DESTINOS INFO*/
 .glass1,
 .glass2,
@@ -51,49 +49,6 @@
     height: 100%;
 
 }
-
-/*Titulos derecha e izquierda*/
-
-@mixin titulosCiudades ($font-size, $margenabajo, $margen-der:0, $margen-izq:0){
-    font-size: $font-size;
-    margin-bottom: $margenabajo;
-    margin-right: $margen-der;
-    margin-left: $margen-izq;
-}
-
-.titulosCiudadesDerecha {
-    @include titulosCiudades (220%, 20px,250px);
-    text-shadow: $sombraTexto;
-    display: flex;
-    justify-content: right;
-}
-
-.titulosCiudadesIzquierda {
-    @include titulosCiudades (220%, 20px,0, 250px);
-    text-shadow: $sombraTexto;
-    display: flex;
-    justify-content: left;
-}
-
-
-
-/*Texto derecha e izquierda*/
-.textoCiudadDerecha {
-    margin-right: 30px;
-    margin-left: 50px;
-    word-spacing: 0.6em;
-    font-size: 110%;
-    text-align: right;
-}
-
-.textoCiudadIzquierda {
-    margin-right: 50px;
-    margin-left: 30px;
-    word-spacing: 0.6em;
-    font-size: 110%;
-    text-align: left;
-}
-
 
 /*Titulos excursiones izq*/
 .excursionesTitulo {
@@ -170,17 +125,42 @@
     }
 
     .excursiones {
-        display:flex;
+        display: flex;
         align-items: center;
         flex-direction: column;
         justify-content: center;
     }
 
+    .excursionesTitulo,
+    .titulosCiudadesDerecha,
+    .titulosCiudadesIzquierda,
+    .mapaDer,
+    .mapaIzq {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
 }
 
-/* Medium devices (tablets, 768px and up)
-@media (min-width: 768px) { ... }*/
+@media (min-width: 768px) {
 
+    /*Imagenes de los tours*/
+    .excursiones {
+        margin-top: 60px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        justify-content: space-evenly;
+    }
+
+    .mapaDer,
+    .mapaIzq{
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+}
 
 
 /*Grids Destinos General - Desktop*/
@@ -246,6 +226,44 @@
         grid-area: footer;
     }
 
+    /*Titulos derecha e izquierda*/
+    @mixin titulosCiudades ($font-size, $margenabajo, $margen-der:0, $margen-izq:0) {
+        font-size: $font-size;
+        margin-bottom: $margenabajo;
+        margin-right: $margen-der;
+        margin-left: $margen-izq;
+    }
+
+    .titulosCiudadesDerecha {
+        @include titulosCiudades (210%, 20px, 250px);
+        text-shadow: $sombraTexto;
+        display: flex;
+        justify-content: right;
+    }
+
+    .titulosCiudadesIzquierda {
+        @include titulosCiudades (210%, 20px, 0, 250px);
+        text-shadow: $sombraTexto;
+        display: flex;
+        justify-content: left;
+    }
+
+    /*Texto derecha e izquierda*/
+    .textoCiudadDerecha {
+        margin-right: 30px;
+        margin-left: 50px;
+        word-spacing: 0.6em;
+        font-size: 110%;
+        text-align: right;
+    }
+
+    .textoCiudadIzquierda {
+        margin-right: 50px;
+        margin-left: 30px;
+        word-spacing: 0.6em;
+        font-size: 110%;
+        text-align: left;
+    }
 
     /*Iconos*/
     .iconosDestinos {
@@ -361,6 +379,4 @@
     .excursiones {
         grid-area: excursiones;
     }
-
-
 }

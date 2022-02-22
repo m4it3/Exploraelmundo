@@ -1,6 +1,5 @@
 /*--------------------INDEX---------------------*/
 
-
 /*BANNER*/
 #banner {
     margin-top: 0px;
@@ -21,7 +20,6 @@
     }
 
 }
-
 
 
 /*IMAGENES*/
@@ -84,6 +82,76 @@ footer {
 
 
 /* --------------------GRIDS-------------------*/
+/*grids movile*/
+@media only screen and (max-width: 768px){
+    .padre {
+        margin: 0 auto;
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(7, auto);
+        grid-template-areas:
+            "header"
+            "banner"
+            "subtitulo1"
+            "galeria"
+            "subtitulo2"
+            "reseñas"
+            "footer";
+    }
+
+    .padre .header {
+        grid-area: header;
+    }
+
+    .padre #banner {
+        grid-area: banner;
+    }
+
+    .padre #subtitulo1 {
+        grid-area: subtitulo1;
+    }
+
+    .padre .gridGaleria{
+        grid-area: galeria;
+        display:flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .padre #subtitulo2 {
+        grid-area: subtitulo2;
+    }
+
+    .padre .reseñas{
+        grid-area: reseñas;
+    }
+
+    .padre #footer {
+        grid-area: footer;
+
+    }
+}
+
+/*grids tablet*/
+@media screen and (min-width: 768px){
+    .gridGaleria{
+        display:flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .reseñas {
+        display: grid;
+        grid-gap: 50px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            "reseña1 reseña2 reseña3";
+    }
+}
+
 
 @media (min-width: 1024px) {
     .padre {
@@ -193,65 +261,3 @@ footer {
     }
 
 }
-
-
-
-/*grids movile*/
-@media only screen and (max-width: 768px){
-    .padre {
-        background: rosybrown;
-        margin: 0 auto;
-        display: grid;
-        grid-gap: 5px;
-        grid-template-columns: 100%;
-        grid-template-rows: repeat(7, auto);
-        grid-template-areas:
-            "header"
-            "banner"
-            "subtitulo1"
-            "galeria"
-            "subtitulo2"
-            "reseñas"
-            "footer";
-    }
-
-    .padre .header {
-        grid-area: header;
-    }
-
-    .padre #banner {
-        grid-area: banner;
-    }
-
-    .padre #subtitulo1 {
-        grid-area: subtitulo1;
-    }
-
-    .padre .gridGaleria{
-        grid-area: galeria;
-        display:flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
-    }
-    
-    .padre #subtitulo2 {
-        grid-area: subtitulo2;
-    }
-
-    .padre .reseñas{
-        grid-area: reseñas;
-    }
-
-    .padre #footer {
-        grid-area: footer;
-
-    }
-
-
-}
-
-
-/*grids tablet*/
-/*@media screen and (min-width: 768px){
-*/
