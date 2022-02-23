@@ -678,16 +678,6 @@ footer .footerFlex .info {
     font-size: 110%;
     text-align: left;
   }
-  /*Iconos*/
-  .iconosDestinos {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    justify-items: center;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-  }
   /*Imagenes de los tours*/
   .excursiones {
     margin-top: 60px;
@@ -1239,7 +1229,7 @@ footer .footerFlex .info {
 .ayuda {
   margin-top: 80px;
   padding: 50px;
-  background-color: #6F4CD4;
+  background-color: #0A2909;
   text-align-last: center;
 }
 
