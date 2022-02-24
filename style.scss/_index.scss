@@ -18,9 +18,7 @@
         transform: translateX(-95%) translateY(-50%);
 
     }
-
 }
-
 
 /*IMAGENES*/
 .imagen1,
@@ -30,7 +28,6 @@
     -webkit-box-shadow: 9px 10px 24px -1px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 9px 10px 24px -1px rgba(0, 0, 0, 0.75);
 }
-
 
 /*RESEÑAS*/
 .reseña1, .reseña2, .reseña3 {
@@ -43,7 +40,6 @@
     border: map-get($map: $cajasReseñas, $key:borde);
     box-shadow: map-get($map: $cajasReseñas, $key:sombra);
 }
-
 
 /*FOOTER*/
 footer {
@@ -217,7 +213,7 @@ footer {
             "imagen1 imagen2 imagen3";
     }
 
-
+    
     /*IMAGENES*/
     .gridGaleria {
         display: flex;
